@@ -20,8 +20,8 @@ public class Massage {
     private static final String product = "Dysmsapi";
     // 产品域名
     private static final String domain = "dysmsapi.aliyuncs.com";
-    private static final String accessKeyId = "LTAIdwxIOKhrVmAJ";
-    private static final String accessKeySecret = "wF6JfwLlHt5MH37kjD9XR3BBIvPtpA";
+    private static final String accessKeyId = "accessKeyId";
+    private static final String accessKeySecret = "accessKeySecret";
 
     public static SendSmsResponse sendSms(String telephone, String code) throws ClientException {
         // 可自助调整超时时间
