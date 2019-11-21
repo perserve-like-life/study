@@ -1,6 +1,5 @@
-1Java：单例模式的七种写法
-2Java：单例模式的七种写法
-123123Java：单例模式的七种写法
+Java：单例模式的七种写法
+
 第一种（懒汉，线程不安全）：
 
 public class Singleton {  
