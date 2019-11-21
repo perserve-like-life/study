@@ -1,5 +1,6 @@
 1Java：单例模式的七种写法
 2Java：单例模式的七种写法
+123123Java：单例模式的七种写法
 第一种（懒汉，线程不安全）：
 
 public class Singleton {  
@@ -25,7 +26,6 @@ public class Singleton {
   }  
   return instance;  
   }  
-} 
 这种写法能够在多线程中很好的工作，而且看起来它也具备很好的lazy loading，但是，遗憾的是，效率很低，99%情况下不需要同步。
 
 第三种（饿汉）：
@@ -90,6 +90,7 @@ public class Singleton {
      return singleton;  
      }  
  } 
+ }
 这个是第二种方式的升级版，俗称双重检查锁定，在JDK1.5之后，双重检查锁定才能够正常达到单例效果。
 
 总结 有两个问题需要注意：
@@ -104,9 +105,11 @@ private static Class getClass(String classname)
                                        throws ClassNotFoundException {     
     ClassLoader classLoader = Thread.currentThread().getContextClassLoader();     
     
+
     if(classLoader == null)     
        classLoader = Singleton.class.getClassLoader();     
     
+
     return (classLoader.loadClass(classname));     
  }     
 }  
@@ -114,9 +117,11 @@ private static Class getClass(String classname)
 
 public class Singleton implements java.io.Serializable {     
  	
+
 	public static Singleton INSTANCE = new Singleton();     
 	protected Singleton() {     
 	      
+
 	}     
 	private Object readResolve() {     
           return INSTANCE;     
